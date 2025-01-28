@@ -1,10 +1,10 @@
-FROM node:21-alpine
-
-RUN npm install -g nodemon
+FROM node:22-alpine
 
 WORKDIR /app
 
-COPY packages.json .
+COPY package.json .
+
+RUN npm install -g nodemon
 
 RUN npm install
 
